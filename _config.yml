@@ -11,14 +11,13 @@ permalink: /blog/:year/:month/:day/:title
 #   style: compressed
 
 # Syntax highlighting
-highlighter:         rouge
-
+highlighter: rouge
 
 # Setup
-title:               Aaron Delani
-tagline:             Testing Site
-url:                 http://aarondelani.github.io/
-baseurl:             /aarondelani.github.io/
+title: Aaron Delani
+tagline: Testing Site
+url: http://aarondelani.github.io/
+# baseurl:
 
 # Assets
 #
