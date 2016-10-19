@@ -11,7 +11,7 @@ permalink: /blog/:year/:month/:day/:title
 #   style: compressed
 
 # Syntax highlighting
-highlighter:         pygments
+highlighter:         rouge
 
 
 # Setup
