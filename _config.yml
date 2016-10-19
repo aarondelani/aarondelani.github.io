@@ -1,8 +1,8 @@
 name: Aaron Delani
- kramdown:
-   input: GFM
-   hard_wrap: false
- gems:
+
+input: GFM
+hard_wrap: false
+gems:
    - jekyll-coffeescript
 #   - jekyll-paginate
 permalink: /blog/:year/:month/:day/:title
