@@ -8,4 +8,5 @@ gems:
 permalink: /blog/:year/:month/:day/:title
 sass:
   sass_dir: sass
+  css_dir: css
   style: compressed
