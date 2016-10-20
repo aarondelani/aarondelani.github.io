@@ -1,7 +1,132 @@
 @import "normalize";
+@import "fonts";
+/*@import url('https://fonts.googleapis.com/css?family=Hind+Guntur');*/
 
 body {
-	background: #EAEAEA;
+	background: #FFF;
 	color: #333;
-	font-family: Arial, Helvetica;
+	font-family: 'Avenir', Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	line-height: 1.75em;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.row {
+	display: table-row;
+
+	.col {
+		display: table-cell;
+	}
+
+	&.wid-33-33-33 {
+		.col {
+			width: 33.333%
+		}
+	}
+}
+
+.wrapper {
+	background: #dadada;
+	position: relative;
+
+	&:before {
+		background: #EAEAEA;
+		bottom: 0;
+		display: block;
+		content: '';
+		left: 50%;
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+}
+
+.landing {
+	margin: 0 auto;
+	max-width: 57.142857143em;
+	position: relative;
+
+	h1, h2, h3 {
+		font-weight: normal;
+		font-size: 18px;
+		margin: 18px 0;
+	}
+
+	img {
+		height: 2.5em;
+	}
+
+	.col-content {
+		font-size: 1.05em;
+		padding: 2.142857143em;
+	}
+
+	.head {
+		/*background: #FFC12D;*/
+		background: #dadada;
+		/*color: #EE4300;*/
+		text-align: center;
+
+		h1 {
+			span {
+				display: block;
+				/*font-size: 0.75em;*/
+				margin-top: 1em;
+			}
+		}
+
+		hr {
+			border: 0;
+			/*border-bottom: 1px solid #EE4300;*/
+			border-bottom: 1px solid #333;
+		}
+
+		ul, li {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+	}
+
+	.about {
+		/*background: #fed062;*/
+		background: #e0e0e0;
+		/*color: #9a5b00;*/
+		letter-spacing: -0.004em;
+
+		h2 {
+			text-align: center;
+		}
+	}
+
+	.work {
+		/*background: #ffe29c;*/
+		background: #EAEAEA;
+		text-align: center;
+
+		path, polygon, polyline {
+			fill: #333;
+		}
+
+		a {
+			display: block;
+			margin: 1.2em 0;
+
+			svg {
+				max-height: 2em;
+				max-width: 100%;
+			}
+
+			&:hover {
+				path, polygon, polyline {
+					fill: #111;
+				}
+			}
+		}
+	}
 }
