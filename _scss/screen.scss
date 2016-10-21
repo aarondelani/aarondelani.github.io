@@ -23,9 +23,38 @@ body {
 		display: table-cell;
 	}
 
-	&.wid-33-33-33 {
+	&.wid-33-33-33,
+	&.wid-33-66,
+	&.wid-66-33 {
 		.col {
 			width: 33.333%
+		}
+	}
+
+	&.wid-33-66 {
+		.col:last-child {
+			width: 66.666%;
+		}
+	}
+
+	&.wid-66-33 {
+		.col:first-child {
+			width: 66.666%;
+		}
+	}
+}
+
+@media (max-width: 649px){
+	.row {
+		display: block;
+
+		&.wid-33-33-33,
+		&.wid-33-66,
+		&.wid-66-33 {
+			.col {
+				display: block;
+				width: 100%;
+			}
 		}
 	}
 }
