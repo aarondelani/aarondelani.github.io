@@ -1,14 +1,24 @@
-$top-col-1-bg-col: #FFE29C;
+/*$top-col-1-bg-col: #FFC12D;
 $top-col-1-col: #EE4300;
 
 $top-col-2-bg-col: #FED062;
 $top-col-2-col: #9A5B00;
 
-$top-col-3-bg-col: #FFC12D;
-$top-col-3-col: #EE5F00;
+$top-col-3-bg-col: #FFE29C;
+$top-col-3-col: #EE5F00;*/
+
+$top-col-1-bg-col: #FFE29C;
+$top-col-1-col: #EE4300;
+
+$top-col-2-bg-col: $top-col-1-bg-col;
+$top-col-2-col: $top-col-1-col;
+
+$top-col-3-bg-col: $top-col-1-bg-col;
+$top-col-3-col: $top-col-1-col;
 
 .wrapper.top {
-	background: #748245;
+	/*background: #748245;*/
+	background: #FFC12D;
 	position: relative;
 	overflow: hidden;
 
@@ -36,10 +46,15 @@ $top-col-3-col: #EE5F00;
 		-webkit-transform: rotate(95deg); /* Chrome, Safari, Opera */
 		transform: rotate(95deg);
 	}
+
+	a {
+		text-decoration: none;
+	}
 }
 
 .landing,
-.process-wrapper {
+.process-wrapper,
+.do-wrapper {
 	margin: 0 auto;
 	max-width: 57.142857143em;
 	position: relative;
@@ -63,9 +78,13 @@ $top-col-3-col: #EE5F00;
 	}
 
 	.head {
-		background: $top-col-3-bg-col;
+		background: $top-col-1-bg-col;
 		color: $top-col-1-col;
 		text-align: center;
+
+		a {
+			color: $top-col-1-col;
+		}
 
 		h1 {
 			span {
@@ -96,6 +115,10 @@ $top-col-3-col: #EE5F00;
 		color: $top-col-2-col;
 		letter-spacing: -0.004em;
 
+		a {
+			color: $top-col-2-col;
+		}
+
 		path {
 			fill: $top-col-2-col;
 		}
@@ -115,6 +138,7 @@ $top-col-3-col: #EE5F00;
 		}
 
 		a {
+			color: $top-col-3-col;
 			display: block;
 			margin: 1.2em 0;
 
