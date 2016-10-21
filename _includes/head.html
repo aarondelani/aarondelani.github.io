@@ -14,14 +14,18 @@
 
 	<title>{{ page.title }}</title>
 	<link href="{{ site.baseurl }}/css/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+	{% if page.title == "Home" %}
+	<link href="{{ site.baseurl }}/css/landing.css" media="screen, projection" rel="stylesheet" type="text/css" />
+	{% endif %}
+
 	{% include favicon.html %}
 
 	<meta property="og:title" content="Aaron Delani&apos;s personal website" />
-	<meta property="og:description" content="This is Aaron Delani&apos;s personal website. He&apos;s an artist, user experience designer, user interface engineer, story teller, photographer, desktop publisher, pre-press operator, and much more. Based out of Portland, Oregon." />
+	<meta property="og:description" content="This is Aaron Delani&apos;s personal website. He&apos;s an artist, user experience designer, user interface engineer, front-end developer, and much more. Based out of Portland, Oregon." />
 	<meta property="og:image" content="http://www.aarondelani.com/images/avatar.jpg" />
 
-	<meta name="description" content="This is Aaron Delani&apos;s personal website. He&apos;s an artist, user experience designer, user interface engineer, story teller, photographer, desktop publisher, pre-press operator, and much more. Based out of Portland, Oregon."/>
-	<meta name="keywords" content="ui, ux, designer, photographer, printer, engineer, software, liferay, javascript, css, html, portland, oregon"/>
+	<meta name="description" content="This is Aaron Delani&apos;s personal website. He&apos;s an artist, user experience designer, user interface engineer, front-end developer, and much more. Based out of Portland, Oregon."/>
+	<meta name="keywords" content="ui, ux, designer, front-end developer, engineer, software, liferay, javascript, css, css3, sass, html, portland, oregon"/>
 	<!--[if IE]>
 	<link href="{{ site.baseurl }}/css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
 	<![endif]-->
