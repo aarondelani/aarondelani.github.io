@@ -37,6 +37,12 @@ body {
 		}
 	}
 
+	&.wid-50-50 {
+		.col {
+			width: 50%;
+		}
+	}
+
 	&.wid-66-33 {
 		.col:first-child {
 			width: 66.666%;
@@ -50,6 +56,7 @@ body {
 
 		&,
 		&.wid-33-33-33,
+		&.wid-50-50,
 		&.wid-33-66,
 		&.wid-66-33 {
 			.col {
