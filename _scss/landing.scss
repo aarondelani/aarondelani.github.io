@@ -46,6 +46,24 @@ $orange: #EE4300;
 	}
 }
 
+.clk-area {
+	display: inline-block;
+	padding: 0.25em 0.125em;
+}
+
+.hire-badge {
+	/*background: #88c500;*/
+	background: #06d7e6;
+	border-radius: 1.25em;
+	color: #004f54;
+	display: block;
+	padding: 0.5em 1em 0.25em;
+	font-weight: 800;
+	position: absolute;
+	bottom: -1.125em;
+	left: 0.5em;
+}
+
 .landing.intro {
 	/*background: url('/images/bike-ride.jpg') 50% 50%;*/
 	/*background: url('/images/br-1.jpg') 50% 45%;*/
@@ -53,6 +71,7 @@ $orange: #EE4300;
 	/*background: url('/images/rock.jpg') 50% 50%;*/
 	background-size: cover;
 	color: #FFF;
+	position: relative;
 
 	.row {
 		&:after {
@@ -93,7 +112,7 @@ $orange: #EE4300;
 		text-align: center;
 
 		a {
-			color: $top-col-1-col;
+			color: #FFB400;
 		}
 
 		h1 {
@@ -165,13 +184,25 @@ $orange: #EE4300;
 			}
 		}
 	}
+
+}
+
+.what-i-do {
+	background: $yellow;
+	color: $default-text-color;
+
+	.offerings {
+		/*background: $orange;*/
+		background: #A95100;
+		color: #FFF;
+	}
 }
 
 footer {
 	padding: 1.5em 0;
 }
 
-@media (min-width: 1300px) {
+@media (min-width: 1366px) {
 	.landing.intro {
 		background-image: url('/images/br-large.jpg');
 	}
