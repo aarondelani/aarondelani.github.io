@@ -29,13 +29,16 @@ $orange: #EE4300;
 	}
 }
 
+.intro,
 .landing,
 .process-wrapper,
 .do-wrapper {
-	margin: 0 auto;
-	max-width: 57.142857143em;
-	position: relative;
-	z-index: 1;
+	.row {
+		margin: 0 auto;
+		max-width: 57.142857143em;
+		position: relative;
+		z-index: 1;
+	}
 
 	.col-content {
 		font-size: 1.05em;
@@ -43,7 +46,33 @@ $orange: #EE4300;
 	}
 }
 
+.landing.intro {
+	/*background: url('/images/bike-ride.jpg') 50% 50%;*/
+	/*background: url('/images/br-1.jpg') 50% 45%;*/
+	background: url('/images/br-mid.jpg') 50% 0%;
+	/*background: url('/images/rock.jpg') 50% 50%;*/
+	background-size: cover;
+	color: #FFF;
+
+	.row {
+		&:after {
+			content: '';
+			clear: both;
+			display: block;
+		}
+	}
+
+	.col {
+		background: rgba(0,0,0,0.8);
+		float: right;
+		width: 50%;
+	}
+}
+
 .landing {
+	background: #242528;
+	color: #EAEAEA;
+
 	h1, h2, h3 {
 		font-weight: normal;
 		font-size: 18px;
@@ -55,7 +84,7 @@ $orange: #EE4300;
 	}
 
 	path, polygon, polyline {
-		fill: #222;
+		fill: #EAEAEA;
 	}
 
 	.head {
@@ -76,12 +105,14 @@ $orange: #EE4300;
 		}
 
 		path, polygon {
-			fill: $default-text-color;
+			/*fill: $default-text-color;*/
+			fill: #FFF
 		}
 
 		hr {
 			border: 0;
-			border-bottom: 1px solid $default-text-color;
+			/*border-bottom: 1px solid $default-text-color;*/
+			border-bottom: 1px solid #EAEAEA;
 		}
 
 		ul, li {
@@ -95,11 +126,20 @@ $orange: #EE4300;
 		h2 {
 			text-align: center;
 		}
+		a {
+			color: #EAEAEA;
+			text-decoration: underline;
+
+			&:hover {
+				color: #CCBB6A;
+			}
+		}
 	}
 
 	.work {
 		/*background: $top-col-1-bg-col;
 		color: $top-col-3-col;*/
+		background: #101018;
 		text-align: center;
 
 		a {
@@ -112,18 +152,54 @@ $orange: #EE4300;
 				max-width: 100%;
 			}
 
+			&.port-ico svg {
+				max-height: 2.5em;
+			}
+
 			&:hover {
+				color: #CCBB6A;
+
 				path, polygon, polyline {
-					fill: $default-text-color;
+					fill: #CCBB6A;
 				}
 			}
 		}
 	}
 }
 
+footer {
+	padding: 1.5em 0;
+}
+
+@media (min-width: 1300px) {
+	.landing.intro {
+		background-image: url('/images/br-large.jpg');
+	}
+
+	.intro {
+		.col {
+			min-height: 40em;
+		}
+	}
+}
 
 @media (max-width: 736px) {
 	.row .col .col-content {
 		padding: 1.75em;
+	}
+}
+
+@media (max-width: 649px){
+	.landing.intro {
+		background-image: url('/images/br-sm.jpg');
+	}
+	/*.work {
+		border-top: 1px solid #EAEAEA;
+	}*/
+}
+
+@media (max-width: 648px){
+	.landing.intro {
+		background-image: url('/images/br-sm-ph.jpg');
 	}
 }

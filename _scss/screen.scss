@@ -17,7 +17,8 @@ body {
 }
 
 .row {
-	display: table-row;
+	/*display: table-row;*/
+	display: block;
 
 	.col {
 		display: table-cell;
@@ -48,6 +49,10 @@ body {
 			width: 66.666%;
 		}
 	}
+}
+
+@media (max-width: 736px) {
+
 }
 
 @media (max-width: 649px){
