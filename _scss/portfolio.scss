@@ -1,0 +1,96 @@
+@import "screen.scss";
+
+$padding-wd: 2.142857143em;
+
+body {
+	background: #EAEAEA;
+}
+
+a {
+	color: #0782B5;
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+nav {
+	padding: 0.5em;
+}
+
+.logo-nav {
+	display: inline-block;
+	vertical-align: middle;
+
+	svg {
+		height: 2.5em;
+		width: 2.5em;
+	}
+}
+
+h1, h2, h3, h4, h5 {
+	font-weight: 100;
+
+	small {
+		font-size: 1em;
+	}
+}
+
+article h1 {
+	text-align: center;
+}
+
+.piece-holder {
+	max-width: $row-width;
+	padding: 0 $padding-wd;
+	margin: 0 auto;
+
+	.title {
+		font-weight: 800;
+	}
+
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+}
+
+@media (max-width: 649px){
+	.row {
+		display: block;
+
+		&,
+		&.wid-33-33-33,
+		&.wid-50-50,
+		&.wid-33-66,
+		&.wid-66-33 {
+			.col {
+				.col-content {
+					padding-top: 0;
+					padding-bottom: 0;
+				}
+
+				&:first-child {
+					.col-content {
+						padding-top: $padding-wd;
+					}
+				}
+
+				&:last-child {
+					.col-content {
+						padding-bottom: $padding-wd;
+					}
+				}
+			}
+		}
+	}
+
+	.piece-holder {
+		padding: 0 0.5em;
+
+		+ .row .col:first-child .col-content {
+			padding-top: 0;
+		}
+	}
+}
