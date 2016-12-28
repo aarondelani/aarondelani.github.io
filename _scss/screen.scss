@@ -19,9 +19,18 @@ body {
 .row {
 	/*display: table-row;*/
 	display: block;
+	margin: 0 auto;
+	max-width: 57.142857143em;
+	position: relative;
+	z-index: 1;
 
 	.col {
 		display: table-cell;
+	}
+
+	.col-content {
+		font-size: 1.05em;
+		padding: 2.142857143em;
 	}
 
 	&.wid-33-33-33,

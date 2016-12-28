@@ -5,7 +5,7 @@ title: Home
 <body>
 <div class="wrapper top">
 	<section class="landing intro">
-	<span class="hire-badge">Currently For Hire</span>
+	<a class="hire-badge email" href="mailto:aaron(somethingstoparse)aarondelani.com?Subject=Hello%20There" target="_blank">For Hire</a>
 		<div class="row wid-100 head">
 			<div class="col">
 				<div class="col-content">
@@ -42,7 +42,7 @@ title: Home
 
 					<ul>
 						<li><a class="clk-area" href="/portfolio">View Portfolio</a></li>
-						<li><a class="clk-area" href="mailto:aaron(@)aarondelani.com">Email</a></li>
+						<li><a class="clk-area email" href="mailto:aaron(somethingstoparse)aarondelani.com?Subject=Hello%20There" target="_blank">Email</a></li>
 						<li><a class="clk-area" href="http://www.instagram.com/aarondelani">Instagram</a></li>
 						<li><a class="clk-area" href="http://www.twitter.com/aarondelani">Twitter</a></li>
 					</ul>
@@ -167,7 +167,7 @@ title: Home
 					<p>I've primarily worked in two industries, with three years in print and over seven years in  software.</p>
 					<ul>
 						<li><strong>Primary Skills:</strong> UI Design, UX Design, HTML, CSS, and Javascript</li>
-						<li><strong>Tools of the Trade:</strong> PHP, Git, SVN, SASS, jQuery, Bootstrap, Adobe Photoshop, Adobe Illustrator, Adobe InDesign, Adobe Acrobat, Adobe Lightroom, Adobe Premiere, Corel Painter, Microsoft Word, Microsoft Excel, Microsoft Powerpoint, and Quark Express</li>
+						<li><strong>Tools of the Trade:</strong> Git, SVN, SASS, jQuery, Bootstrap, PHP, Adobe Photoshop, Adobe Illustrator, Adobe InDesign, Adobe Acrobat, Adobe Lightroom, Adobe Premiere, Corel Painter, Microsoft Word, Microsoft Excel, Microsoft Powerpoint, and Quark Express</li>
 						<li><strong>Print:</strong> binding, cutting, folding, and printing (xerography, single color press, four color press, print-plate creation, large format printing), and silk screening</li>
 						<li><strong>Others:</strong> print pre-press production, drawing, photography (film &amp; digital), painting (oil, watercolor, acrylic), sculpting, writing, playing the ukulele, video editing, sewing, (<a href="http://www.etymonline.com/index.php?term=amateur" target="_blank">amateur</a>) bicycle maintenance, and long distance cycling (touring)</li>
 					</ul>
@@ -194,3 +194,6 @@ title: Home
 </section>
 </div>
 </body>
+<script type="text/javascript">
+	emails(document.getElementsByClassName('email'));
+</script>
