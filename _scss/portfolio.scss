@@ -6,6 +6,28 @@ body {
 	background: #EAEAEA;
 }
 
+.poster {
+	height: 75%;
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+
+	img {
+		display: none;
+	}
+}
+
+article {
+	position: relative;
+	z-index: 1;
+
+	h1 {
+		position: relative;
+		z-index: 2;
+	}
+}
+
 a {
 	color: #0782B5;
 	text-decoration: none;
@@ -17,6 +39,8 @@ a {
 
 nav {
 	padding: 0.5em;
+	position: relative;
+	z-index: 1;
 }
 
 .logo-nav {
@@ -92,5 +116,11 @@ article h1 {
 		+ .row .col:first-child .col-content {
 			padding-top: 0;
 		}
+	}
+}
+
+@media (max-height: 649px){
+	.poster {
+		height: 125%;
 	}
 }
