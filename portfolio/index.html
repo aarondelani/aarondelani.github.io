@@ -3,36 +3,9 @@ layout: portfolio_piece
 title: Portfolio
 ---
 <body>
-	<!-- <div class="poster" style="background-image: url('images/poster.jpg')"><img src="images/poster.jpg" alt=""></div> -->
-	<nav>
-		<ul class="list-style no-style inline-block margin-0 padding-0">
-			<li>
-				<a href="/" class="logo-nav">
-					<svg version="1.1" id="aaron_delani_logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-					width="82.75px" height="82.75px" viewBox="0 0 82.75 82.75" enable-background="new 0 0 82.75 82.75" xml:space="preserve">
-					<path d="M41.375,0C18.561,0,0,18.561,0,41.375S18.561,82.75,41.375,82.75S82.75,64.189,82.75,41.375S64.189,0,41.375,0z
-					M41.375,79.375c-20.986,0-38-17.014-38-38c0-20.987,17.014-38,38-38s38,17.013,38,38C79.375,62.361,62.361,79.375,41.375,79.375z"
-					/>
-					<g>
-						<path d="M64.486,32.524c-1.117-2.252-2.584-4.132-4.395-5.64c-1.812-1.507-3.846-2.633-6.098-3.379
-						c-2.252-0.744-4.496-1.117-6.732-1.117h-9.57l1.395,3.252h7.16c2.709,0,5.072,0.424,7.088,1.27
-						c2.016,0.848,3.684,1.956,5.004,3.328c1.322,1.372,2.312,2.939,2.973,4.7c0.66,1.762,0.992,3.574,0.992,5.437
-						c0,1.863-0.332,3.676-0.992,5.437c-0.66,1.762-1.65,3.328-2.973,4.7c-1.32,1.371-2.988,2.481-5.004,3.327
-						c-0.59,0.249-1.221,0.449-1.871,0.624l1.342,3.125c0.396-0.107,0.793-0.213,1.189-0.345c2.252-0.744,4.285-1.871,6.098-3.379
-						c1.811-1.506,3.277-3.378,4.395-5.614c1.117-2.235,1.678-4.86,1.678-7.875C66.164,37.395,65.604,34.778,64.486,32.524z"/>
-						<polygon points="43.342,45.558 27.883,45.558 35.48,27.249 33.762,23.248 18.586,58.361 22.6,58.361 26.512,48.911 44.781,48.911
-						"/>
-					</g>
-				</svg>
-			</a>
-			</li>
-			<li>
-				<span>Portfolio</span>
-			</li>
-		</ul>
-
-</nav>
-<article>
+	<div class="poster" style="background: #FFC12D;"></div>
+{% include port_nav.html %}
+<section>
 	<h1>UI/UX: <small>&#8220;Social Office&#8221;</small></h1>
 	<div class="row wid-50-50 introduction">
 		<div class="col">
@@ -110,8 +83,40 @@ title: Portfolio
 			</div>
 		</div>
 	</div>
-</article>
-
-<script type="text/javascript">
-	var poster = [{"style":"background: #FFC12D;"}];
-</script>
+	<div class="piece-holder">
+		<p class="title">User Bar, Quick Jump <small>(Searching Continued)</small></p>
+		<img class="piece" src="http://www.aarondelani.com/portfolio/social-office-2013/images/05-site-searching.png" width="1167" height="900" alt="Social Office Search">
+	</div>
+	<div class="piece-holder">
+		<p class="title">User Profile</p>
+		<img class="piece" src="http://www.aarondelani.com/portfolio/social-office-2013/images/06-user-profile.png" width="1167" height="900" alt="Social Office User Profile">
+	</div>
+	<div class="row wid-50-50">
+		<div class="col">
+			<div class="col-content">
+				<p>This is a mockup of a user's profile. This interface introduced a new UI element called a control bar that allows a user to interact quickly within the context of the page.</p>
+			</div>
+		</div>
+		<div class="col">
+			<div class="col-content">
+				<p>2013<br><em>Photoshop and Illustrator</em><br>This feature was partially produced</p>
+			</div>
+		</div>
+	</div>
+	<div class="piece-holder">
+		<p class="title">Site Forum</p>
+		<img class="piece" src="http://www.aarondelani.com/portfolio/social-office-2013/images/07-site-forum.png" width="1167" height="900" alt="Social Office Site Forum">
+	</div>
+	<div class="row wid-50-50">
+		<div class="col">
+			<div class="col-content">
+				<p>A quick rendering of a site's forum page.</p>
+			</div>
+		</div>
+		<div class="col">
+			<div class="col-content">
+				<p>2013<br><em>Photoshop and Illustrator</em><br>This feature was partially produced</p>
+			</div>
+		</div>
+	</div>
+</section>

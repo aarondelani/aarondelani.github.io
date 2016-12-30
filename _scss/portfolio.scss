@@ -18,12 +18,13 @@ body {
 	}
 }
 
-article {
+section {
 	position: relative;
 	z-index: 1;
 
 	h1 {
 		position: relative;
+		text-align: center;
 		z-index: 2;
 	}
 }
@@ -38,9 +39,14 @@ a {
 }
 
 nav {
-	padding: 0.5em;
+	/*padding: 0.5em;*/
 	position: relative;
 	z-index: 1;
+
+	a {
+		display: inline-block;
+		padding: 0.5em 1em 0;
+	}
 }
 
 .logo-nav {
@@ -59,10 +65,6 @@ h1, h2, h3, h4, h5 {
 	small {
 		font-size: 1em;
 	}
-}
-
-article h1 {
-	text-align: center;
 }
 
 .piece-holder {

@@ -67,12 +67,4 @@ emails = function (arr) {
 	}
 }
 
-createPoster = function (params) {
-	var params = params;
-	console.log(params)
-
-		var poster = createObj('<div class="poster"/>', params);
-		body.appendChild(poster);
-}
-
 })();
