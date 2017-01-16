@@ -42,8 +42,9 @@ $orange: #EE4300;
 .landing.intro {
 	/*background: url('/images/bike-ride.jpg') 50% 50%;*/
 	/*background: url('/images/br-1.jpg') 50% 45%;*/
-	background: url('/images/br-mid.jpg') 50% 0%;
-	/*background: url('/images/river-1.jpg') 50% 100%;*/
+	/*background: url('/images/br-mid.jpg') 50% 0%;*/
+	background: url('/images/dc-1-mid.jpg') 50% 100%;
+	/*background: url('/images/river.jpg') 50% 0;*/
 	/*background: url('/images/face.jpg') 50% 0%;*/
 	/*background: url('/images/rock.jpg') 50% 50%;*/
 	background-size: cover;
@@ -191,7 +192,8 @@ footer {
 
 @media (min-width: 1366px) {
 	.landing.intro {
-		background-image: url('/images/br-large.jpg');
+		/*background-image: url('/images/br-large.jpg');*/
+		background-image: url('/images/dc-1-large.jpg');
 	}
 
 	.intro {
@@ -209,7 +211,8 @@ footer {
 
 @media (max-width: 649px){
 	.landing.intro {
-		background-image: url('/images/br-sm.jpg');
+		/*background-image: url('/images/br-sm.jpg');*/
+		background-image: url('/images/dc-1-sm.jpg');
 	}
 	/*.work {
 		border-top: 1px solid #EAEAEA;
@@ -218,6 +221,7 @@ footer {
 
 @media (max-width: 648px){
 	.landing.intro {
-		background-image: url('/images/br-sm-ph.jpg');
+		/*background-image: url('/images/br-sm-ph.jpg');*/
+		background-image: url('/images/dc-1-sm-ph.jpg');
 	}
 }
