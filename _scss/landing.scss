@@ -26,27 +26,20 @@ $orange: #EE4300;
 }
 
 .hire-badge {
-	/*background: #88c500;*/
 	background: #06d7e6;
 	border-radius: 1.25em;
-	color: #004f54;
+	color: #004F54;
 	display: block;
-	padding: 0.5em 1em 0.25em;
 	font-weight: 800;
-	position: absolute;
-	bottom: -1.125em;
 	left: 0.5em;
+	padding: 0.5em 1em 0.25em;
+	position: absolute;
+	top: 0.5em;
 	z-index: 3;
 }
 
 .landing.intro {
-	/*background: url('/images/bike-ride.jpg') 50% 50%;*/
-	/*background: url('/images/br-1.jpg') 50% 45%;*/
-	/*background: url('/images/br-mid.jpg') 50% 0%;*/
-	background: url('/images/dc-1-mid.jpg') 50% 100%;
-	/*background: url('/images/river.jpg') 50% 0;*/
-	/*background: url('/images/face.jpg') 50% 0%;*/
-	/*background: url('/images/rock.jpg') 50% 50%;*/
+	background: url('/images/dc-1-mid.jpg') 50% 99%;
 	background-size: cover;
 	color: #FFF;
 	position: relative;
@@ -179,7 +172,6 @@ $orange: #EE4300;
 	color: $default-text-color;
 
 	.offerings {
-		/*background: $orange;*/
 		background: #A95100;
 		color: #FFF;
 	}
@@ -192,7 +184,6 @@ footer {
 
 @media (min-width: 1366px) {
 	.landing.intro {
-		/*background-image: url('/images/br-large.jpg');*/
 		background-image: url('/images/dc-1-large.jpg');
 	}
 
@@ -211,17 +202,23 @@ footer {
 
 @media (max-width: 649px){
 	.landing.intro {
-		/*background-image: url('/images/br-sm.jpg');*/
 		background-image: url('/images/dc-1-sm.jpg');
 	}
-	/*.work {
-		border-top: 1px solid #EAEAEA;
-	}*/
 }
 
 @media (max-width: 648px){
 	.landing.intro {
-		/*background-image: url('/images/br-sm-ph.jpg');*/
 		background-image: url('/images/dc-1-sm-ph.jpg');
+	}
+}
+
+@media (max-width: 320px) {
+	.landing.intro {
+		padding-bottom: 320px;
+		background-position: 0 100%;
+
+		.col {
+			width: 100%;
+		}
 	}
 }
