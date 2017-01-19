@@ -1,7 +1,7 @@
+@import "globals";
 @import "normalize";
 @import "fonts";
 /*@import url('https://fonts.googleapis.com/css?family=Hind+Guntur');*/
-$row-width: 57.142857143em;
 
 body {
 	background: #FFF;
@@ -31,7 +31,7 @@ body {
 
 	.col-content {
 		font-size: 1.05em;
-		padding: 2.142857143em;
+		padding: $col-content-pad;
 	}
 
 	&.wid-33-33-33,

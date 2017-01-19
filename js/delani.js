@@ -1,5 +1,7 @@
 (function delani(i) {
 body = document.body;
+prevScroll = {Y: scrollY, X: scrollX},
+scrollDown = false;
 
 // Creating DOM Objects on the Fly
 createObj = function (o, attrs) {
@@ -66,5 +68,63 @@ emails = function (arr) {
 		}
 	}
 }
+
+function hasClass(el, c) {
+	if (el.classList) {
+		return el.classList.contains(c);
+	} else {
+		return !!el.className.match(new RegExp('(\\s|^)' + c + '(\\s|$)'));
+	}
+};
+
+function addClass(el, c) {
+	if (el.classList) {
+		el.classList.add(c);
+	} else if (!hasClass(el, c)) {
+		el.c += " " + c;
+	}
+};
+
+function removeClass(el, c) {
+	if (el.classList) {
+		el.classList.remove(c);
+	} else if (hasClass(el, c)) {
+		var reg = new RegExp('(\\s|^)' + c + '(\\s|$)')
+		el.className=el.className.replace(reg, ' ');
+	}
+};
+
+nav = document.getElementById("port_nav"),
+prevScroll = {Y: scrollY, X: scrollX},
+scrollDown = false;
+
+window.onscroll = function () {
+	// console.log('something');
+	if (scrollY > nav.offsetHeight) {
+		addClass(body, 'scrolled');
+	} else if (scrollY < nav.offsetHeight) {
+		removeClass(body, 'scrolled');
+	}
+
+	if (scrollY > prevScroll.Y) {
+		scrollDown = true;
+	}  if ((scrollY < prevScroll.Y) || !(scrollY > 0)) {
+		scrollDown = false;
+	}
+
+	if (!scrollDown) {
+		nav.style.marginTop = 0;
+		addClass(body, 'scrolling-up')
+	} else {
+		if (hasClass(body, 'scrolling-up')) {
+			nav.style.marginTop = "-" + nav.offsetHeight + "px";
+			removeClass(body, 'scrolling-up');
+		};
+	}
+
+	console.log(nav.style.marginTop);
+
+	prevScroll = {Y: scrollY, X: scrollX};
+};
 
 })();

@@ -6,6 +6,9 @@ body {
 	background: #EAEAEA;
 }
 
+$port-header-color: #9CAF43;
+
+
 .poster {
 	height: 75%;
 	left: 0;
@@ -15,6 +18,111 @@ body {
 
 	img {
 		display: none;
+	}
+}
+
+.port-intro {
+	.port-header {
+		color: #FFF;
+		padding: 2em 0 0.75em;
+	}
+
+	.poster {
+		background: $port-header-color;
+	}
+
+	.port-gallery {
+		ul {
+			background: #FFF;
+			position: relative;
+			z-index: 1;
+			width: $row-width;
+			margin: 0 auto;
+
+			&:after {
+				content: '';
+				display: block;
+				clear: both;
+			}
+
+			li {
+				width: 50%;
+				float: left;
+
+				a {
+					display: block;
+					padding: $col-content-pad;
+				}
+
+				+ li {
+					a {
+						padding-bottom: 0;
+						padding-top: $col-content-pad;
+					}
+				}
+
+				&:first-child,
+				&:nth-child(2) {
+					a {
+						padding-top: $col-content-pad;
+						padding-bottom: 0;
+					}
+				}
+
+				&:nth-child(odd) {
+					a {
+						padding-right: $col-content-pad/2;
+					}
+				}
+
+				&:nth-child(even) {
+					a {
+						padding-left: $col-content-pad/2;
+					}
+				}
+
+				&:last-child,
+				&:nth-last-child(2) {
+					padding-bottom: $col-content-pad;
+				}
+			}
+		}
+
+		.gallery-link {
+			color: #FFF;
+			position: relative;
+
+			img {
+				width: 100%;
+				height: auto;
+			}
+
+			.description {
+				background: rgba(0,0,0, 0.6);
+				bottom: 0;
+				left: 0;
+				position: absolute;
+				padding: 0.5em;
+				right: 0;
+
+				.item-name {
+					font-weight: 800;
+				}
+
+				p:nth-child(2) {
+					margin-top: 0;
+				}
+
+				p:last-child {
+					margin-bottom: 0;
+				}
+			}
+
+			&:hover .description {
+				background: rgba(0,0,0, 0.8);
+			}
+		}
+
 	}
 }
 
@@ -38,14 +146,44 @@ a {
 	}
 }
 
+$nav-color: #FFF;
+
 nav {
-	/*padding: 0.5em;*/
-	position: relative;
-	z-index: 1;
+	background: rgba(0,0,0, 0.8);
+	left: 0;
+	margin-top: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 2;
+
+	-webkit-transition : margin-top 500ms ease-out;
+	-moz-transition : margin-top 500ms ease-out;
+	-o-transition : margin-top 500ms ease-out;
+	transition : margin-top 500ms ease-out;
+
+	ul {
+		width: $row-width;
+		margin: 0 auto;
+		padding: 0 $col-content-pad;
+	}
+
+	li {
+		margin: -0.5em 0;
+	}
 
 	a {
+		color: $nav-color;
 		display: inline-block;
-		padding: 0.5em 1em 0;
+		font-weight: 800;
+		padding: 0.5em 1em;
+	}
+
+	.selected {
+		a {
+			color: $port-header-color;
+			background: rgba(0,0,0, 0.5);
+		}
 	}
 }
 
@@ -56,6 +194,10 @@ nav {
 	svg {
 		height: 2.5em;
 		width: 2.5em;
+
+		path, polygon {
+			fill: $nav-color;
+		}
 	}
 }
 
