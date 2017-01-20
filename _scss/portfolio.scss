@@ -96,13 +96,14 @@ nav {
 
 .port-intro {
 	.port-header {
-		color: #FFF;
+		color: #222;
 		padding: 4.75em 0 0.75em;
 	}
 
 	.poster {
 		/*background: #71802B;*/
-		background: #E8930C;
+		/*background: #E8930C;*/
+		background: rgb(255, 193, 45);
 
 		&:after {
 			bottom: -50%;

@@ -126,11 +126,15 @@ if (nav != null) {
 introduction = document.getElementsByClassName('introduction')[0];
 poster = document.getElementsByClassName('poster')[0];
 
-var posterReset = function () {
+var posterReset = function (e) {
 	if (introduction) {
 		var introval = introduction.offsetHeight + introduction.offsetTop;
 		var posterLess = poster.offsetHeight <= introval;
 		console.log('poster less than window', poster.offsetHeight < window.innerHeight/2);
+
+		if (e != undefined) {
+			console.log(e);
+		}
 
 		if (posterLess) {
 			console.log('eureka', posterLess, poster.offsetHeight, introval);
@@ -145,6 +149,10 @@ var posterReset = function () {
 
 posterReset();
 
-window.addEventListener('orientationchange', posterReset());
-window.addEventListener('resize', posterReset());
+window.addEventListener('orientationchange', function (e) {
+	posterReset(e);
+});
+window.addEventListener('resize', function (e) {
+	posterReset(e);
+});
 })();
