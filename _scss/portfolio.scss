@@ -84,6 +84,10 @@ nav {
 	right: 0;
 	top: 0;
 	overflow: hidden;
+	-webkit-transition : height 200ms ease-out;
+	-moz-transition : height 200ms ease-out;
+	-o-transition : height 200ms ease-out;
+	transition : height 200ms ease-out;
 
 	img {
 		display: none;
@@ -97,8 +101,8 @@ nav {
 	}
 
 	.poster {
-		background: #71802B;
-		/*background: #E8930C;*/
+		/*background: #71802B;*/
+		background: #E8930C;
 
 		&:after {
 			bottom: -50%;
@@ -106,7 +110,8 @@ nav {
 			height: 100%;
 			left: -50%;
 			position: absolute;
-			border-top: 0.6em solid #E8930C;
+			border-top: 0.6em solid #71802B;;
+			/*border-top: 0.6em solid #E8930C;*/
 			/*border-top: 0.6em solid #5f6f13;*/
 			width: 200%;
 			background: #EAEAEA;
@@ -156,7 +161,10 @@ nav {
 		}
 
 		.gallery-link {
+			border-radius: 8px;
+			box-shadow: 0 3px 10px -3px #000;
 			color: #FFF;
+			overflow: hidden;
 			position: relative;
 
 			img {
@@ -165,7 +173,7 @@ nav {
 			}
 
 			.description {
-				background: rgba(0,0,0, 0.6);
+				background: rgba(0,0,0, 0.8);
 				bottom: 0;
 				left: 0;
 				position: absolute;
@@ -239,30 +247,21 @@ a {
 
 @media (max-width: 736px) {
 	.port-intro {
-		.poster {
-			height: 90%;
-
-			&:after {
-				bottom: -85%;
-			}
-		}
-
 		.port-gallery {
 			ul li {
 				width: 50%;
-			}
-			.gallery-link {
-
 			}
 		}
 	}
 }
 
-@media (max-width: 649px) {
-	.poster {
-		height: 125%;
+@media (max-height: 775px), (max-width: 736px) {
+	.port-intro .poster {
+		/*height: 100%;*/
 	}
+}
 
+@media (max-width: 649px) {
 	.row {
 		display: block;
 
@@ -301,13 +300,80 @@ a {
 	}
 }
 
-@media (max-width: 648px) {
+@media (max-height: 414px) {
+	.port-intro .poster:after {
+		bottom: -85%;
+	}
 }
 
-@media (max-width: 410px) {
+@media (max-width: 414px) {
 	.port-intro .port-gallery {
 		ul li {
 			width: 100%;
+			margin-bottom: 0;
+			padding-bottom: 0;
+
+			.gallery-link {
+				border-bottom: 1px solid #EAEAEA;
+				color: #222;
+				margin-bottom: 0;
+				margin-top: 0;
+				box-shadow: none;
+
+				-webkit-transition : background-color 500ms ease-out;
+				-moz-transition : background-color 500ms ease-out;
+				-o-transition : background-color 500ms ease-out;
+				transition : background-color 500ms ease-out;
+
+				&:after {
+					content: '';
+					clear: both;
+					width: 100;
+				}
+
+				img, .description {
+					float: left;
+				}
+
+				img {
+					max-width: 25%;
+					margin-right: 0.5em;
+				}
+
+				.description {
+					background: transparent;
+					position: relative;
+					padding: 0;
+					max-width: 70%;
+				}
+
+				&:hover, &:active {
+					background: rgba(0, 0, 0, 0.8);
+					color: #FFF;
+					.description {
+						background: transparent;
+					}
+				}
+			}
+
+			&:first-child {
+				.gallery-link {
+					border-radius: 8px 8px 0 0;
+				}
+			}
+
+			+ li {
+				.gallery-link {
+					border-radius: 0;
+				}
+			}
+
+			&:last-child {
+				.gallery-link {
+					border-radius: 0 0 8px 8px;
+					border-bottom: 0;
+				}
+			}
 		}
 	}
 }

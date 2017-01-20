@@ -122,4 +122,29 @@ if (nav != null) {
 		prevScroll = {Y: scrollY, X: scrollX};
 	};
 }
+
+introduction = document.getElementsByClassName('introduction')[0];
+poster = document.getElementsByClassName('poster')[0];
+
+var posterReset = function () {
+	if (introduction) {
+		var introval = introduction.offsetHeight + introduction.offsetTop;
+		var posterLess = poster.offsetHeight <= introval;
+		console.log('poster less than window', poster.offsetHeight < window.innerHeight/2);
+
+		if (posterLess) {
+			console.log('eureka', posterLess, poster.offsetHeight, introval);
+
+			poster.style.height = introval + "px";
+		} if ((window.innerHeight/2) < poster.offsetHeight) {
+
+			poster.style.height = window.innerHeight + "px";
+		}
+	}
+};
+
+posterReset();
+
+window.addEventListener('orientationchange', posterReset());
+window.addEventListener('resize', posterReset());
 })();
