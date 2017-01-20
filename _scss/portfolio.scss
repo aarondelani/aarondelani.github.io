@@ -1,7 +1,6 @@
 @import "screen.scss";
 
 $padding-wd: 2.142857143em;
-$port-header-color: #71802b;
 
 body {
 	background: #EAEAEA;
@@ -84,6 +83,7 @@ nav {
 	position: absolute;
 	right: 0;
 	top: 0;
+	overflow: hidden;
 
 	img {
 		display: none;
@@ -97,19 +97,28 @@ nav {
 	}
 
 	.poster {
-		background: $port-header-color;
-		overflow: hidden;
+		background: #71802B;
+		/*background: #E8930C;*/
 
 		&:after {
-			content: '';
-			position: absolute;
-			left: -12.5%;
 			bottom: -50%;
-			width: 150%;
-			height: 75%;
-			background: #E8930C;
-			transform: rotate(15deg);
+			content: '';
+			height: 100%;
+			left: -50%;
+			position: absolute;
+			border-top: 0.6em solid #E8930C;
+			/*border-top: 0.6em solid #5f6f13;*/
+			width: 200%;
+			background: #EAEAEA;
+			/*background: #E8930C;*/
+			/*background: #71802B;*/
+			transform: rotate(8deg);
 		}
+		/*Midnight Blue*/
+		/*&:before {
+			background: #0A2C6E;
+			transform: rotate(-15deg);
+		}*/
 	}
 
 	.port-gallery {
@@ -127,45 +136,21 @@ nav {
 			}
 
 			li {
-				background: #FFF;
-				width: 50%;
+				width: 33.333%;
 				float: left;
+				padding-bottom: $col-content-pad/2;
 
 				a {
+					background: #FFF;
 					display: block;
-					padding: $col-content-pad;
+					margin: $col-content-pad/2 $col-content-pad/2 0;
+					padding: 0.5em;
 				}
 
 				+ li {
 					a {
-						padding-bottom: 0;
-						padding-top: $col-content-pad;
+						margin-bottom: 0;
 					}
-				}
-
-				&:first-child,
-				&:nth-child(2) {
-					a {
-						padding-top: $col-content-pad;
-						padding-bottom: 0;
-					}
-				}
-
-				&:nth-child(odd) {
-					a {
-						padding-right: $col-content-pad/2;
-					}
-				}
-
-				&:nth-child(even) {
-					a {
-						padding-left: $col-content-pad/2;
-					}
-				}
-
-				&:last-child,
-				&:nth-last-child(2) {
-					padding-bottom: $col-content-pad;
 				}
 			}
 		}
@@ -184,8 +169,13 @@ nav {
 				bottom: 0;
 				left: 0;
 				position: absolute;
-				padding: 0.5em;
+				padding: 0.75em;
 				right: 0;
+
+				-webkit-transition : background-color 500ms ease-out;
+				-moz-transition : background-color 500ms ease-out;
+				-o-transition : background-color 500ms ease-out;
+				transition : background-color 500ms ease-out;
 
 				.item-name {
 					font-weight: 800;
@@ -244,7 +234,35 @@ a {
 	}
 }
 
-@media (max-width: 649px){
+@media (min-width: 1366px) {
+}
+
+@media (max-width: 736px) {
+	.port-intro {
+		.poster {
+			height: 90%;
+
+			&:after {
+				bottom: -85%;
+			}
+		}
+
+		.port-gallery {
+			ul li {
+				width: 50%;
+			}
+			.gallery-link {
+
+			}
+		}
+	}
+}
+
+@media (max-width: 649px) {
+	.poster {
+		height: 125%;
+	}
+
 	.row {
 		display: block;
 
@@ -283,8 +301,13 @@ a {
 	}
 }
 
-@media (max-height: 649px){
-	.poster {
-		height: 125%;
+@media (max-width: 648px) {
+}
+
+@media (max-width: 410px) {
+	.port-intro .port-gallery {
+		ul li {
+			width: 100%;
+		}
 	}
 }
