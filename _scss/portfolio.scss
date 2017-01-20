@@ -301,8 +301,12 @@ a {
 }
 
 @media (max-height: 414px) {
-	.port-intro .poster:after {
-		bottom: -85%;
+	.port-intro .poster {
+		height: 100%;
+
+		&:after {
+			bottom: -85%;
+		}
 	}
 }
 
