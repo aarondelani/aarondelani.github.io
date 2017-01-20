@@ -1,13 +1,82 @@
 @import "screen.scss";
 
 $padding-wd: 2.142857143em;
+$port-header-color: #71802b;
 
 body {
 	background: #EAEAEA;
 }
 
-$port-header-color: #9CAF43;
+h1, h2, h3, h4, h5 {
+	font-weight: 100;
 
+	small {
+		font-size: 1em;
+	}
+}
+
+$nav-color: #FFF;
+
+nav {
+	background: rgba(0,0,0, 0.8);
+	left: 0;
+	margin-top: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 2;
+	overflow: hidden;
+
+	-webkit-transition : margin-top 500ms ease-out;
+	-moz-transition : margin-top 500ms ease-out;
+	-o-transition : margin-top 500ms ease-out;
+	transition : margin-top 500ms ease-out;
+
+	ul {
+		width: $row-width;
+		margin: 0 auto;
+		padding: 0 $col-content-pad;
+	}
+
+	li {
+		margin: -0.75em 0;
+	}
+
+	a {
+		color: $nav-color;
+		display: inline-block;
+		/*font-weight: 800;*/
+		padding: 0.75em 1em;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+
+		&:hover {
+			text-decoration: none;
+			background: rgba(0,0,0, 0.5);
+		}
+	}
+
+	.selected {
+		a {
+			background: rgba(0,0,0, 0.5);
+		}
+	}
+}
+
+.logo-nav {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0.35em 0 -0.125em;
+
+	svg {
+		height: 2.5em;
+		width: 2.5em;
+
+		path, polygon {
+			fill: $nav-color;
+		}
+	}
+}
 
 .poster {
 	height: 75%;
@@ -24,19 +93,31 @@ $port-header-color: #9CAF43;
 .port-intro {
 	.port-header {
 		color: #FFF;
-		padding: 2em 0 0.75em;
+		padding: 4.75em 0 0.75em;
 	}
 
 	.poster {
 		background: $port-header-color;
+		overflow: hidden;
+
+		&:after {
+			content: '';
+			position: absolute;
+			left: -12.5%;
+			bottom: -50%;
+			width: 150%;
+			height: 75%;
+			background: #E8930C;
+			transform: rotate(15deg);
+		}
 	}
 
 	.port-gallery {
 		ul {
-			background: #FFF;
+			/*background: #FFF;*/
 			position: relative;
 			z-index: 1;
-			width: $row-width;
+			max-width: $row-width;
 			margin: 0 auto;
 
 			&:after {
@@ -46,6 +127,7 @@ $port-header-color: #9CAF43;
 			}
 
 			li {
+				background: #FFF;
 				width: 50%;
 				float: left;
 
@@ -126,7 +208,8 @@ $port-header-color: #9CAF43;
 	}
 }
 
-section {
+article {
+	padding-top: 7em;
 	position: relative;
 	z-index: 1;
 
@@ -143,69 +226,6 @@ a {
 
 	&:hover {
 		text-decoration: underline;
-	}
-}
-
-$nav-color: #FFF;
-
-nav {
-	background: rgba(0,0,0, 0.8);
-	left: 0;
-	margin-top: 0;
-	position: fixed;
-	right: 0;
-	top: 0;
-	z-index: 2;
-
-	-webkit-transition : margin-top 500ms ease-out;
-	-moz-transition : margin-top 500ms ease-out;
-	-o-transition : margin-top 500ms ease-out;
-	transition : margin-top 500ms ease-out;
-
-	ul {
-		width: $row-width;
-		margin: 0 auto;
-		padding: 0 $col-content-pad;
-	}
-
-	li {
-		margin: -0.5em 0;
-	}
-
-	a {
-		color: $nav-color;
-		display: inline-block;
-		font-weight: 800;
-		padding: 0.5em 1em;
-	}
-
-	.selected {
-		a {
-			color: $port-header-color;
-			background: rgba(0,0,0, 0.5);
-		}
-	}
-}
-
-.logo-nav {
-	display: inline-block;
-	vertical-align: middle;
-
-	svg {
-		height: 2.5em;
-		width: 2.5em;
-
-		path, polygon {
-			fill: $nav-color;
-		}
-	}
-}
-
-h1, h2, h3, h4, h5 {
-	font-weight: 100;
-
-	small {
-		font-size: 1em;
 	}
 }
 

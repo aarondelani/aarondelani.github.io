@@ -69,7 +69,7 @@ emails = function (arr) {
 	}
 }
 
-function hasClass(el, c) {
+hasClass = function (el, c) {
 	if (el.classList) {
 		return el.classList.contains(c);
 	} else {
@@ -77,7 +77,7 @@ function hasClass(el, c) {
 	}
 };
 
-function addClass(el, c) {
+addClass = function (el, c) {
 	if (el.classList) {
 		el.classList.add(c);
 	} else if (!hasClass(el, c)) {
@@ -85,7 +85,7 @@ function addClass(el, c) {
 	}
 };
 
-function removeClass(el, c) {
+removeClass = function (el, c) {
 	if (el.classList) {
 		el.classList.remove(c);
 	} else if (hasClass(el, c)) {
@@ -98,33 +98,28 @@ nav = document.getElementById("port_nav"),
 prevScroll = {Y: scrollY, X: scrollX},
 scrollDown = false;
 
-window.onscroll = function () {
-	// console.log('something');
-	if (scrollY > nav.offsetHeight) {
-		addClass(body, 'scrolled');
-	} else if (scrollY < nav.offsetHeight) {
-		removeClass(body, 'scrolled');
-	}
+if (nav != null) {
+	window.onscroll = function () {
+		// console.log('something');
+		if (scrollY > nav.offsetHeight) {
+			addClass(body, 'scrolled');
+		} else if (scrollY < nav.offsetHeight) {
+			removeClass(body, 'scrolled');
+		}
 
-	if (scrollY > prevScroll.Y) {
-		scrollDown = true;
-	}  if ((scrollY < prevScroll.Y) || !(scrollY > 0)) {
-		scrollDown = false;
-	}
+		if (scrollY > prevScroll.Y) {
+			scrollDown = true;
+		}  if ((scrollY < prevScroll.Y) || !(scrollY > 0)) {
+			scrollDown = false;
+		}
 
-	if (!scrollDown) {
-		nav.style.marginTop = 0;
-		addClass(body, 'scrolling-up')
-	} else {
-		if (hasClass(body, 'scrolling-up')) {
+		if (!scrollDown) {
+			nav.style.marginTop = 0;
+		} else {
 			nav.style.marginTop = "-" + nav.offsetHeight + "px";
-			removeClass(body, 'scrolling-up');
-		};
-	}
+		}
 
-	console.log(nav.style.marginTop);
-
-	prevScroll = {Y: scrollY, X: scrollX};
-};
-
+		prevScroll = {Y: scrollY, X: scrollX};
+	};
+}
 })();
