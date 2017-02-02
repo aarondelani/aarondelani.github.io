@@ -111,7 +111,7 @@ nav {
 			height: 100%;
 			left: -50%;
 			position: absolute;
-			border-top: 0.6em solid #71802B;;
+			/*border-top: 0.6em solid #71802B;;*/
 			/*border-top: 0.6em solid #E8930C;*/
 			/*border-top: 0.6em solid #5f6f13;*/
 			width: 200%;
@@ -151,6 +151,7 @@ nav {
 					display: block;
 					margin: $col-content-pad/2 $col-content-pad/2 0;
 					padding: 0.5em;
+					max-height: 315px;
 				}
 
 				+ li {
@@ -162,9 +163,9 @@ nav {
 		}
 
 		.gallery-link {
-			border-radius: 8px;
-			box-shadow: 0 3px 10px -3px #000;
-			color: #FFF;
+			border-radius: 4px;
+			/*box-shadow: 0 3px 10px -3px #000;*/
+			color: #222;
 			overflow: hidden;
 			position: relative;
 
@@ -174,17 +175,22 @@ nav {
 			}
 
 			.description {
-				background: rgba(0,0,0, 0.8);
-				bottom: 0;
+				/*background: rgba(0,0,0, 0.8);*/
+				/*bottom: 0;
 				left: 0;
-				position: absolute;
+				position: absolute;*/
 				padding: 0.75em;
-				right: 0;
+				margin: 0 -0.50em;
+				max-height: 69px;
+				/*right: 0;*/
+				background: #FFF;
+				border-radius: 4px;
+				overflow: hidden;
 
-				-webkit-transition : background-color 500ms ease-out;
-				-moz-transition : background-color 500ms ease-out;
-				-o-transition : background-color 500ms ease-out;
-				transition : background-color 500ms ease-out;
+				-webkit-transition : max-height 500ms ease-out;
+				-moz-transition : max-height 500ms ease-out;
+				-o-transition : max-height 500ms ease-out;
+				transition : max-height 500ms ease-out;
 
 				.item-name {
 					font-weight: 800;
@@ -199,8 +205,14 @@ nav {
 				}
 			}
 
-			&:hover .description {
-				background: rgba(0,0,0, 0.8);
+			&:hover {
+				text-decoration: none;
+				overflow: visible;
+
+				.description {
+					/*background: rgba(0,0,0, 0.8);*/
+					max-height: 200px;
+				}
 			}
 		}
 
@@ -213,7 +225,9 @@ article {
 	z-index: 1;
 
 	h1 {
+		line-height: 1.25em;
 		position: relative;
+		padding: 0 $col-content-pad/2;
 		text-align: center;
 		z-index: 2;
 	}

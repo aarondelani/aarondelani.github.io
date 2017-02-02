@@ -130,7 +130,6 @@ var posterReset = function (e) {
 	if (introduction) {
 		var introval = introduction.offsetHeight + introduction.offsetTop;
 		var posterLess = poster.offsetHeight <= introval;
-		console.log('poster less than window', poster.offsetHeight < window.innerHeight/2);
 
 		if (e != undefined) {
 			console.log(e);
@@ -140,8 +139,8 @@ var posterReset = function (e) {
 			console.log('eureka', posterLess, poster.offsetHeight, introval);
 
 			poster.style.height = introval + "px";
-		} if ((window.innerHeight/2) < poster.offsetHeight) {
-
+		} if (poster.offsetHeight < (window.innerHeight/2)) {
+			console.log('poster less than window', poster.offsetHeight < window.innerHeight/2);
 			poster.style.height = window.innerHeight + "px";
 		}
 	}
