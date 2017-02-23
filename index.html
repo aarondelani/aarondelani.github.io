@@ -41,7 +41,6 @@ title: Home
 					<h3>Connect:</h3>
 
 					<ul class="list-style no-style margin-0 padding-0">
-						<li><a class="clk-area" href="/portfolio">View Portfolio</a></li>
 						<li><a class="clk-area email" href="mailto:aaron(somethingstoparse)aarondelani.com?Subject=Hello%20There" target="_blank">Email</a></li>
 						<li><a class="clk-area" href="http://www.instagram.com/aarondelani">Instagram</a></li>
 						<li><a class="clk-area" href="http://www.twitter.com/aarondelani">Twitter</a></li>
@@ -191,6 +190,31 @@ title: Home
 </section>
 </div>
 </body>
+<script src="http://c.lytics.io/static/pathfora.min.js"></script>
 <script type="text/javascript">
 	emails(document.getElementsByClassName('email'));
+	var slideout = new pathfora.Form({
+		id: 'form-slideout',
+		layout: 'slideout',
+		headline: 'Bike Things Coming',
+		msg: 'Sign up for my mailing list, I promise not to spam!',
+		image: 'https://pbs.twimg.com/profile_images/834852504831741952/8ywoTtwS.jpg',
+		fields: {
+			name: false,
+			email: true
+		},
+		required: {
+			name: true,
+			email: true
+		},
+		placeholder: {
+			name: 'What&apos;s your name',
+			email: 'your.email@email.com'
+		},
+		success: {
+			headline: 'Thanks!',
+			msg: 'It&apos;ll be quite for a bit, but you&apos;ll hear from me soon.',
+			delay: 5
+		}
+	});
 </script>
