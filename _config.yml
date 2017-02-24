@@ -26,4 +26,8 @@ sass:
   sass_dir:          css
   style:            :compressed
 
+gems:
+  - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
+  - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
+
 exclude: [node_modules, config.rb, Gemfile, Gemfile.lock, gulpfile.js, README.md]
