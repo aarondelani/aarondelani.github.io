@@ -3,3 +3,36 @@
 {{ content }}
 
 {% include footer.html %}
+
+</body>
+<script src="http://c.lytics.io/static/pathfora.min.js"></script>
+<script type="text/javascript">
+	emails(document.getElementsByClassName('email'));
+</script>
+<script type="text/javascript">
+
+var slideout = new pathfora.Form({
+	id: 'form-slideout',
+	layout: 'slideout',
+	headline: 'Bike Things Coming',
+	msg: 'Sign up for my mailing list, I promise not to spam!',
+	image: 'https://pbs.twimg.com/profile_images/834852504831741952/8ywoTtwS.jpg',
+	fields: {
+		name: true,
+		email: true
+	},
+	required: {
+		name: true,
+		email: true
+	},
+	placeholder: {
+		name: 'Name',
+		email: 'Email'
+	},
+	success: {
+		headline: 'Thanks!',
+		msg: 'It&apos;ll be quite for a bit, but you&apos;ll hear from me soon.',
+		delay: 5
+	}
+});
+</script>
