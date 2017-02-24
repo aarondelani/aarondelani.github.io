@@ -25,3 +25,5 @@ url: http://aarondelani.github.io/
 sass:
   sass_dir:          css
   style:            :compressed
+
+exclude: [node_modules, config.rb, Gemfile, Gemfile.lock, gulpfile.js, README.md]
