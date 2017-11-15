@@ -1,14 +1,15 @@
-name: Aaron Delani
+author:
+  name: Aaron Delani
+  url: http://aarondelani.com
 
 input: GFM
 hard_wrap: false
 gems:
-   - jekyll-coffeescript
-#   - jekyll-paginate
-permalink: /blog/:year/:month/:day/:title
-# sass:
-#   sass_dir: css
-#   style: compressed
+  - jekyll-coffeescript
+  - jekyll-paginate
+  - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
+  - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
+
 
 # Syntax highlighting
 highlighter: rouge
@@ -17,17 +18,17 @@ highlighter: rouge
 title: Aaron Delani
 tagline: Everything is Under Construction
 url: http://aarondelani.github.io/
-# baseurl:
+
+baseurl: ""
+
+permalink: /blog/:year/:month/:day/:title
+paginate: 5
+
 
 # Assets
-#
-# We specify the directory for Jekyll so we can use @imports.
-sass:
-  sass_dir:          css
-  style:            :compressed
 
-gems:
-  - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
-  - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
+sass:
+sass_dir: css
+style: compressed
 
 exclude: [node_modules, config.rb, Gemfile, Gemfile.lock, gulpfile.js, README.md]
